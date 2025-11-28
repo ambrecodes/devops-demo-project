@@ -24,6 +24,8 @@ services:
       - ci-network
     environment:
       - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+      - SONAR_JAVA_OPTS=-Xmx2g -Xms512m
+
 
 networks:
   ci-network:
