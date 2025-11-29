@@ -1,12 +1,11 @@
-# Base image 
+# Base image
 FROM eclipse-temurin:21-jdk-alpine
 
-# setting artifact path
-ARG artifact=target/demo-java-app.jar
-
+# Set working directory
 WORKDIR /opt/app
 
-COPY ${artifact} app.jar
+# Copy the built jar
+COPY target/demo-java-app.jar app.jar
 
-# Entrypoint for running app
-ENTRYPOINT ["java","-jar","app.jar"]
+# Run the app
+ENTRYPOINT ["java", "-jar", "app.jar"]
