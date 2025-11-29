@@ -1,6 +1,6 @@
 # Dockerfile
 
-FROM jenkins/jenkins:lts-jdk17
+FROM eclipse-temurin:21-jdk-alpine
 
 # Switch to root to install Maven and Docker
 USER root
